@@ -4225,6 +4225,23 @@ section {
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
+.dataframe tbody td {
+    white-space: nowrap;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    padding: 14px 5px;
+    border-top: none;
+}
+
+.dataframe thead tr:last-child td{
+    white-space: nowrap;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 14px 5px;
+    border-top: none;
+
+}
+
 .table-earning thead th {
     background: #333;
     font-size: 16px;
