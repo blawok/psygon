@@ -1,0 +1,2 @@
+FLASK_APP=psygon.py
+FLASK_DEBUG=1
