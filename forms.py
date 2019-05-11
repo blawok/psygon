@@ -3,29 +3,17 @@ from wtforms import StringField, SubmitField, DateField, SelectField, IntegerFie
 from wtforms.validators import DataRequired
 
 class InfoForm(FlaskForm):
-    """
-    class that inherits from FlaskForm
-    used for getting values from user
-    """
+    title = StringField('Event name:', validators=[DataRequired()])
     question1 = StringField('Question 1:', validators=[DataRequired()])
+    question2 = StringField('Question 2:', validators=[DataRequired()])
+    question3 = StringField('Question 3:', validators=[DataRequired()])
+    answer1 = StringField('Answers for 1:', validators=[DataRequired()])
+    answer2 = StringField(validators=[DataRequired()])
+    answer3 = StringField(validators=[DataRequired()])
+    answer4 = StringField('Answers for 2:', validators=[DataRequired()])
+    answer5 = StringField(validators=[DataRequired()])
+    answer6 = StringField(validators=[DataRequired()])
+    answer7 = StringField('Answers for 3:', validators=[DataRequired()])
+    answer8 = StringField(validators=[DataRequired()])
+    answer9 = StringField(validators=[DataRequired()])
     submit = SubmitField('Submit')
-
-
-# class UpdateForm(FlaskForm):
-#     """
-#     class that inherits from FlaskForm
-#     used for getting values from user to update cryptoStats
-#     """
-#     currencyUpdate = SelectField(u'Currency:',
-#                            choices = [('lisk', 'LSK'),
-#                                       ('bitcoin', 'BTC'),
-#                                       ('ripple', 'XRP'),
-#                                       ('ethereum', 'ETH'),
-#                                       ('litecoin', 'LTC')
-#                                       ],
-#                            validators=[DataRequired()])
-#     dateUpdate = StringField("Choose date to update", validators=[DataRequired()])
-#     highUpdate = IntegerField("Change high value", validators=[DataRequired()])
-#     lowUpdate = IntegerField("Change low value", validators=[DataRequired()])
-
-#     submit = SubmitField('Submit')

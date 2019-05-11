@@ -25,5 +25,5 @@ class fireConnect():
         numUnique = self.df.index.nunique()
         return numActive, numUnique
 
-fc = fireConnect()
-i,j=fc.getStats()
+# fc = fireConnect()
+# i,j=fc.getStats()

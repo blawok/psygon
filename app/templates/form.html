@@ -78,87 +78,78 @@
                                     <div class="card-body card-block">
                                             <div class="row form-group" style=" margin-bottom: 3rem">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Event name:</label>
+                                                        {{ form.title.label }}
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="text-input" placeholder="e.g. BEST Leauge Hackathon" class="form-control">
+                                                        {{ form.title (class="form-control", placeholder="e.g. BEST Leauge Hackathon") }}
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    {{ form.question1.label }}
+                                                    {{ form.question1.label (class="form-control-label") }}
                                                 </div>
                                                 <div class="col col-md-9">
-                                                    {{ form.question1(class="form-control") }}
+                                                    {{ form.question1 (class="form-control") }}
                                                 </div>
                                             </div>
                                             <div class="row form-group" style=" margin-bottom: 3rem">
                                                 <div class="col col-md-3">
-                                                        <label for="text-input" class=" form-control-label">Answers for 1:</label>
+                                                        {{ form.answer1.label (class="form-control-label") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="1st Answer" class="form-control">
+                                                        {{ form.answer1 (class="form-control", placeholder="1st Answer") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="2nd Answer" class="form-control">
+                                                        {{ form.answer2 (class="form-control", placeholder="2nd Answer") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="3rd Answer" class="form-control">
+                                                        {{ form.answer3 (class="form-control", placeholder="3rd Answer") }}
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Question 2:</label>
+                                                        {{ form.question2.label (class="form-control-label") }}
                                                 </div>
                                                 <div class="col col-md-9">
-                                                    <input type="text" placeholder="Student types?" class="form-control">
+                                                        {{ form.question2 (class="form-control") }}
                                                 </div>
                                             </div>
                                             <div class="row form-group" style=" margin-bottom: 3rem">
                                                 <div class="col col-md-3">
-                                                        <label for="text-input" class=" form-control-label">Answers for 2:</label>
+                                                        {{ form.answer4.label (class="form-control-label") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="1st Answer" class="form-control">
+                                                        {{ form.answer4 (class="form-control", placeholder="1st Answer") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="2nd Answer" class="form-control">
+                                                        {{ form.answer5 (class="form-control", placeholder="2nd Answer") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="3rd Answer" class="form-control">
+                                                        {{ form.answer6 (class="form-control", placeholder="3rd Answer") }}
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Question 3:</label>
+                                                        {{ form.question3.label (class="form-control-label") }}
                                                 </div>
                                                 <div class="col col-md-9">
-                                                    <input type="text" placeholder="Student types?" class="form-control">
+                                                        {{ form.question3 (class="form-control") }}
                                                 </div>
                                             </div>
                                             <div class="row form-group" style=" margin-bottom: 3rem">
                                                 <div class="col col-md-3">
-                                                        <label for="text-input" class=" form-control-label">Answers for 3:</label>
+                                                        {{ form.answer7.label (class="form-control-label") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="1st Answer" class="form-control">
+                                                        {{ form.answer7 (class="form-control", placeholder="1st Answer") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="2nd Answer" class="form-control">
+                                                        {{ form.answer8 (class="form-control", placeholder="2nd Answer") }}
                                                 </div>
                                                 <div class="col col-md-3">
-                                                    <input type="text" placeholder="3rd Answer" class="form-control">
+                                                        {{ form.answer9 (class="form-control", placeholder="3rd Answer") }}
                                                 </div>
                                             </div>
-<!--
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="file-input" class=" form-control-label">Upload your logo:</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
-                                                </div>
-                                            </div> -->
                                         </div>
                                     <div class="card-footer">
                                         {{ form.submit() }}
