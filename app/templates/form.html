@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
                 <meta name="keywords" content="au theme template">
 
                 <!-- Title Page-->
-                <title>Main Page</title>
+                <title>Creating Event</title>
 
                 <!-- Fontfaces CSS-->
                 <link href="static/css/font-face.css" rel="stylesheet" media="all">
@@ -38,7 +39,6 @@
 
 <body class="animsition">
     <div class="page-wrapper">
-
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
@@ -71,26 +71,39 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="card">
+                                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                     <div class="card-header">
                                         <strong>Create your own event</strong>
                                     </div>
                                     <div class="card-body card-block">
-                                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                            <div class="row form-group">
+                                            <div class="row form-group" style=" margin-bottom: 3rem">
                                                 <div class="col col-md-3">
                                                     <label for="text-input" class=" form-control-label">Event name:</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
-                                                    <small class="form-text text-muted">This is a help text</small>
+                                                    <input type="text" id="text-input" name="text-input" placeholder="e.g. BEST Leauge Hackathon" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Question 1:</label>
+                                                    {{ form.question1.label }}
                                                 </div>
                                                 <div class="col col-md-9">
-                                                    <input type="text" placeholder="Student types?" class="form-control">
+                                                    {{ form.question1(class="form-control") }}
+                                                </div>
+                                            </div>
+                                            <div class="row form-group" style=" margin-bottom: 3rem">
+                                                <div class="col col-md-3">
+                                                        <label for="text-input" class=" form-control-label">Answers for 1:</label>
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="1st Answer" class="form-control">
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="2nd Answer" class="form-control">
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="3rd Answer" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -101,6 +114,20 @@
                                                     <input type="text" placeholder="Student types?" class="form-control">
                                                 </div>
                                             </div>
+                                            <div class="row form-group" style=" margin-bottom: 3rem">
+                                                <div class="col col-md-3">
+                                                        <label for="text-input" class=" form-control-label">Answers for 2:</label>
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="1st Answer" class="form-control">
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="2nd Answer" class="form-control">
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="3rd Answer" class="form-control">
+                                                </div>
+                                            </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label for="text-input" class=" form-control-label">Question 3:</label>
@@ -109,7 +136,21 @@
                                                     <input type="text" placeholder="Student types?" class="form-control">
                                                 </div>
                                             </div>
-
+                                            <div class="row form-group" style=" margin-bottom: 3rem">
+                                                <div class="col col-md-3">
+                                                        <label for="text-input" class=" form-control-label">Answers for 3:</label>
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="1st Answer" class="form-control">
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="2nd Answer" class="form-control">
+                                                </div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" placeholder="3rd Answer" class="form-control">
+                                                </div>
+                                            </div>
+<!--
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
                                                     <label for="file-input" class=" form-control-label">Upload your logo:</label>
@@ -117,17 +158,15 @@
                                                 <div class="col-12 col-md-9">
                                                     <input type="file" id="file-input" name="file-input" class="form-control-file">
                                                 </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                            </div> -->
+                                        </div>
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary btn-sm">
-                                            <i class="fa fa-dot-circle-o"></i> Submit
-                                        </button>
+                                        {{ form.submit() }}
                                         <button type="reset" class="btn btn-danger btn-sm">
-                                            <i class="fa fa-ban"></i> Reset
+                                            Reset
                                         </button>
                                     </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

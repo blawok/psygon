@@ -1,7 +1,8 @@
 from app import app
-from flask import (Flask, render_template)
+from flask import (Flask, render_template, flash, redirect)
 import pyrebase
 import pandas as pd
+from forms import InfoForm
 
 from fireConnect import fireConnect
 
@@ -14,8 +15,13 @@ def home():
     return render_template('base.html',
                            numActive=numActive,
                            numUnique=numUnique,
-                           tables=fc.df.to_html(classes=["table-responsive"]))
+                           tables=fc.df.to_html(classes=["table"]))
 
-@app.route("/form")
-def form():
-    return render_template("form.html")
+
+@app.route('/form/', methods=['GET', 'POST'])
+@app.route('/form', methods=['GET', 'POST'])
+def submit():
+    form = InfoForm()
+    question = form.question.data
+    print(question)
+    return render_template('form.html', title='Submit', form=form)
