@@ -1,14 +1,13 @@
 import pyrebase
 import pandas as pd
 
-
 class fireConnect():
 
     def __init__(self):
         config = {
         "apiKey": "AIzaSyCb4oRMVM6s4eFTJ9oMU5p4Xpv_9GQvMCE",
         "authDomain": "studentgo-76a0d.firebaseapp.com",
-        "databaseURL": "https://studentgo-76a0d.firebaseio.com/",
+        "databaseURL": "https://studentgo-76a0d.firebaseio.com",
         "storageBucket": "studentgo-76a0d.appspot.com"
         }
 
@@ -25,5 +24,5 @@ class fireConnect():
         numUnique = self.df.index.nunique()
         return numActive, numUnique
 
-fc = fireConnect()
-i,j=fc.getStats()
+# fc = fireConnect()
+# i,j=fc.getStats()
