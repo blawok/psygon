@@ -13,9 +13,9 @@ def home():
 
     fc = fireConnect()
     numActive,numUnique = fc.getStats()
-    df = fc.df.sort_values(by=["active"])
+    df = fc.df.sort_values(by=["scoreCount"], ascending=False)
     df['Rank'] = np.arange(1, len(df) + 1)
-    df = df.rename(columns={'firstName' : 'First Name', 'lastName' : 'Last Name', 'active' : 'Active now?'})
+    df = df.rename(columns={'firstName' : 'First Name', 'lastName' : 'Last Name', 'scoreCount' : 'Score'})
     leaderName = df['First Name'][0]
     leaderSurname = df['Last Name'][0]
     currentLeader = leaderName + " " + leaderSurname
@@ -23,7 +23,7 @@ def home():
                            numActive=numActive,
                            numUnique=numUnique,
                            currentLeader = currentLeader,
-                           tables=df[['Rank','First Name','Last Name','Active now?']].to_html(classes=["table"], index=False))
+                           tables=df[['Rank','First Name','Last Name','Score']].to_html(classes=["table"], index=False))
 
 
 @app.route('/form/', methods=['GET', 'POST'])
