@@ -42,7 +42,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                    <!-- <img src="static/logo.jpg" alt="Meet2Win" /> -->
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -50,7 +50,7 @@
                     <ul class="list-unstyled navbar__list">
                         <li>
                             <a href="/">
-                                <i class="fas fa-chart-bar"></i>Event Rankings</a>
+                            <i class="fas fa-chart-bar"></i>Event Rankings</a>
                         </li>
                         <li class="active">
                             <a href="form.html">
@@ -72,6 +72,7 @@
                             <div class="col-lg-12">
                                 <div class="card">
                                     <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                        {{ form.csrf_token }}
                                     <div class="card-header">
                                         <strong>Create your own event</strong>
                                     </div>
@@ -81,7 +82,7 @@
                                                         {{ form.title.label }}
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                        {{ form.title (class="form-control", placeholder="e.g. BEST Leauge Hackathon") }}
+                                                        {{ form.title (class="form-control", placeholder="e.g. BEST Hacking League - Hackathon") }}
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -152,10 +153,7 @@
                                             </div>
                                         </div>
                                     <div class="card-footer">
-                                        {{ form.submit() }}
-                                        <button type="reset" class="btn btn-danger btn-sm">
-                                            Reset
-                                        </button>
+                                        {{ form.submit(class="au-btn--submit") }}
                                     </div>
                                     </form>
                                 </div>

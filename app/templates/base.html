@@ -40,8 +40,9 @@
     <div class="page-wrapper">
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                <a href="#" style="font-size: 50px; color:white; padding: 20px">
+                    Meet2Win
+                    <!-- <img src="static/logo.jpg" alt="Meet2Win" /> -->
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -63,17 +64,6 @@
         <div class="page-container2">
             <!-- HEADER DESKTOP-->
             <header class="header-desktop2">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="header-wrap2">
-                            <div class="logo d-block d-lg-none">
-                                <a href="#">
-                                    <img src="static/images/icon/logo-white.png" alt="CoolAdmin" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </header>
             <!-- END HEADER DESKTOP-->
 
@@ -81,7 +71,7 @@
             <section class="au-breadcrumb m-t-75">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <h3><center>Gotta catch 'em all</center></h3>
+                        <h3 style="font-size: 40px"><center>BEST Hacking League - Hackathon</center></h3>
                     </div>
                 </div>
             </section>
@@ -92,21 +82,30 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-12 col-lg-6">
+                            <div class="col-md-12 col-lg-4">
                                 <div class="statistic__item">
-                                    <h2 class="number">{{ numActive | safe }}</h2>
-                                    <span class="desc">Active users</span>
+                                    <h3 style="font-size: 25px">Active users</h>
+                                    <h2 class="number" style="font-size: 50px">{{ numActive | safe }}</h2>
                                     <div class="icon">
-                                        <i class="zmdi zmdi-github-box"></i>
+                                        <i class="zmdi zmdi-swap"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 col-lg-6">
+                            <div class="col-md-12 col-lg-4">
                                 <div class="statistic__item">
-                                    <h2 class="number">{{ numUnique | safe }}</h2>
-                                    <span class="desc">All users</span>
+                                    <h3 style="font-size: 25px">Current leader</h3>
+                                    <h2 class="number" style="font-size: 40px">{{ currentLeader | safe }}</h2>
                                     <div class="icon">
-                                        <i class="zmdi zmdi-shopping-cart"></i>
+                                        <i class="zmdi zmdi-view-list"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-4">
+                                <div class="statistic__item">
+                                    <h3 style="font-size: 25px">All users</h3>
+                                    <h2 class="number" style="font-size: 50px">{{ numUnique | safe }}</h2>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-view-list"></i>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +120,7 @@
                     <div class="container-fluid">
                         <div class="row">
                                 <div class="col-lg-12">
-                                    <h2 class="title-1 m-b-25">Event ranking</h2>
+                                    <h2 class="title-1 m-b-25" style="text-align:center">Event ranking</h2>
                                     <div class="au-card au-card-top-countries m-b-40">
                                         <div class="au-card-inner">
                                             <div class="table-responsive">
@@ -134,6 +133,10 @@
                     </div>
                 </div>
             </section>
+
+
+
+
 
             <section>
                 <div class="container-fluid">
