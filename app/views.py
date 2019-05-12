@@ -22,8 +22,7 @@ def home():
     return render_template('base.html',
                            numActive=numActive,
                            numUnique=numUnique,
-                           currentLeader = currentLeader,
-                           tables=df[['Rank','First Name','Last Name','Active now?']].to_html(classes=["table"], index=False))
+                           tables=fc.df[['firstName', 'lastName', 'active']].to_html(classes=["table"],index=False))
 
 
 @app.route('/form/', methods=['GET', 'POST'])
